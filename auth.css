@@ -1,0 +1,183 @@
+.auth-container {
+    display: flex;
+    min-height: calc(100vh - 150px);
+    padding: 2rem 5%;
+    gap: 3rem;
+    align-items: center;
+}
+
+.auth-card {
+    flex: 1;
+    max-width: 500px;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.auth-card h2 {
+    color: #ff6b00;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.auth-submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background: #ff6b00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    color: #666;
+}
+
+.auth-divider {
+    position: relative;
+    margin: 1.5rem 0;
+    text-align: center;
+    color: #999;
+}
+
+.auth-divider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #eee;
+    z-index: -1;
+}
+
+.auth-divider span {
+    background: white;
+    padding: 0 1rem;
+}
+
+.auth-switch-btn {
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+.auth-benefits {
+    flex: 1;
+    padding: 0 2rem;
+}
+
+.auth-benefits h3 {
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.auth-benefits ul {
+    list-style: none;
+}
+
+.auth-benefits li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.auth-benefits li i {
+    position: absolute;
+    left: 0;
+    color: #ff6b00;
+}
+
+@media (max-width: 768px) {
+    .auth-container {
+        flex-direction: column;
+    }
+    
+    .auth-card {
+        max-width: 100%;
+    }
+    
+    .auth-benefits {
+        padding: 2rem 0 0;
+    }
+}
+
+/* Estilos específicos para a página de registro */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0;
+}
+
+.checkbox-group input {
+    margin-right: 0.5rem;
+    width: auto;
+}
+
+.terms-link {
+    color: #ff6b00;
+    text-decoration: none;
+}
+
+.terms-link:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para login social */
+.auth-social-login {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.auth-social-login p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.social-btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.google-btn {
+    background: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.facebook-btn {
+    background: #3b5998;
+    color: white;
+}
+
+.social-btn i {
+    font-size: 1.2rem;
+}

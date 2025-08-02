@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-ao">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness.AO - Encontre Ginásios em Luanda</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png">
+<link rel="manifest" href="image/site.webmanifest">
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+           <!-- <img src="image/logo.svg" alt="Fitness.AO"> -->
+            <h1>Fitness<span>.AO</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="gyms.html" class="active">Ginásios</a></li>
+                <li><a href="plans.html">Planos</a></li>
+                <li><a href="contact.html">Contactos</a></li>
+            </ul>
+        </nav>
+
+        <button class="cta-button" onclick="window.location.href='register-gym.html'">
+            Registar Ginásio
+        </button>
+
+        <div class="auth-buttons">
+            <a href="login.html" class="login-btn">
+                <i class="fas fa-user"></i> Login
+            </a>
+            <a href="register-user.html" class="register-btn">
+                Criar Conta
+            </a>
+        </div>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="hero">
+        <h2>Encontre o Melhor Ginásio em Luanda</h2>
+        <p>Descubra academias próximas, compare preços e reserve seu treino!</p>
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar por bairro (ex: Talatona, Maianga...)">
+            <button><i class="fas fa-search"></i> Buscar</button>
+        </div>
+    </section>
+
+    <!-- Ginásios em Destaque -->
+    <section class="featured-gyms">
+        <h3>Ginásios Populares</h3>
+        <div class="gym-list">
+            <div class="gym-card">
+                <img src="assets/gym1.jpg" alt="Academia Bodytech">
+                <h4>Academia Bodytech</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Talatona</p>
+                <p><i class="fas fa-money-bill-wave"></i> 15.000 Kz/mês</p>
+                <button onclick="window.location.href='gym-details.html'">Ver Detalhes</button>
+            </div>
+            <div class="gym-card">
+                <img src="assets/gym2.jpg" alt="Iron Nation">
+                <h4>Iron Nation</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Morro Bento</p>
+                <p><i class="fas fa-money-bill-wave"></i> 20.000 Kz/mês</p>
+                <button>Ver Detalhes</button>
+            </div>
+            <div class="gym-card">
+                <img src="assets/gym3.jpg" alt="Fitness Hut">
+                <h4>Fitness Hut</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Belas Shopping</p>
+                <p><i class="fas fa-money-bill-wave"></i> 25.000 Kz/mês</p>
+                <button>Ver Detalhes</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2023 Fitness.AO - Todos os direitos reservados</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
