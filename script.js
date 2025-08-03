@@ -37,4 +37,5 @@ document.getElementById('location-filter').addEventListener('change', (e) => {
 // Carregar ginásios ao abrir a página
 if (window.location.pathname.includes('gyms.html')) {
     loadGyms();
+   // setTimeout(() => { }, 2000);
 }
