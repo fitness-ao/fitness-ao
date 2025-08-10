@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-ao">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Admin - Fitness.AO</title>
+    <link rel="stylesheet" href="assets/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="../assets/logo.png" alt="Fitness.AO">
+                <h2>Fitness.<span>AO</span></h2>
+            </div>
+            <nav>
+                <ul>
+                    <li class="active"><a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="views/academias.html"><i class="fas fa-dumbbell"></i> Academias</a></li>
+                    <li><a href="views/usuarios.html"><i class="fas fa-users"></i> Usuários</a></li>
+                    <li><a href="views/financeiro.html"><i class="fas fa-chart-line"></i> Financeiro</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Configurações</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="search-bar">
+                    <input type="text" placeholder="Pesquisar...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="user-area">
+                    <span>Admin</span>
+                    <div class="user-avatar">
+                        <img src="../assets/admin-avatar.jpg" alt="Admin">
+                    </div>
+                </div>
+            </header>
+
+            <section class="metrics">
+                <div class="metric-card">
+                    <div class="metric-info">
+                        <h3>Academias</h3>
+                        <span class="value">42</span>
+                        <span class="change up">+5%</span>
+                    </div>
+                    <i class="fas fa-dumbbell icon"></i>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-info">
+                        <h3>Usuários</h3>
+                        <span class="value">1,248</span>
+                        <span class="change up">+12%</span>
+                    </div>
+                    <i class="fas fa-users icon"></i>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-info">
+                        <h3>Receita</h3>
+                        <span class="value">5.2M Kz</span>
+                        <span class="change down">-3%</span>
+                    </div>
+                    <i class="fas fa-wallet icon"></i>
+                </div>
+            </section>
+
+            <section class="recent-activity">
+                <h2><i class="fas fa-clock"></i> Atividade Recente</h2>
+                <div class="activity-list">
+                    <!-- Atividades serão carregadas via JavaScript -->
+                </div>
+            </section>
+
+            <!-- No final do main-content -->
+            <section class="charts-section">
+                <div class="chart-container">
+                    <canvas id="gymsByLocationChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="revenueChart"></canvas>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="assets/admin.js"></script>
+</body>
+
+</html>

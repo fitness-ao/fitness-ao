@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-ao">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios Financeiros - Fitness.AO Admin</title>
+    <link rel="stylesheet" href="../assets/css/admin.css">
+         <link rel="stylesheet" href="assets/admin.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        
+        <main class="main-content">
+            <header class="top-bar">
+                <!-- Barra superior -->
+            </header>
+
+            <div class="page-header">
+                <h1><i class="fas fa-chart-line"></i> Relatórios Financeiros</h1>
+                <div class="period-selector">
+                    <select id="reportPeriod">
+                        <option value="7">Últimos 7 dias</option>
+                        <option value="30" selected>Últimos 30 dias</option>
+                        <option value="90">Últimos 3 meses</option>
+                        <option value="custom">Personalizado</option>
+                    </select>
+                    <div id="customDateRange" style="display:none;">
+                        <input type="date" id="startDate">
+                        <span>até</span>
+                        <input type="date" id="endDate">
+                    </div>
+                </div>
+            </div>
+
+            <div class="financial-summary">
+                <div class="summary-card">
+                    <div class="summary-value">5.245.000 Kz</div>
+                    <div class="summary-label">Receita Total</div>
+                    <div class="summary-change up">+12% vs período anterior</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-value">1.028.000 Kz</div>
+                    <div class="summary-label">Comissões</div>
+                    <div class="summary-change up">+8% vs período anterior</div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-value">87%</div>
+                    <div class="summary-label">Taxa de Pagamentos</div>
+                    <div class="summary-change down">-3% vs período anterior</div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="revenueChart"></canvas>
+            </div>
+
+            <div class="table-container">
+                <table id="transactionsTable" class="display">
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Academia</th>
+                            <th>Tipo</th>
+                            <th>Valor</th>
+                            <th>Método</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dados serão carregados via JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../assets/js/admin-financeiro.js"></script>
+</body>
+</html>

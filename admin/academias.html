@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-ao">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Academias - Fitness.AO Admin</title>
+  <!--  <link rel="stylesheet" href="../assets/css/admin.css"> --> 
+     <link rel="stylesheet" href="assets/admin.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar (manter igual ao index.html) -->
+        
+        <main class="main-content">
+            <header class="top-bar">
+                <!-- Barra superior igual ao index.html -->
+            </header>
+
+            <div class="page-header">
+                <h1><i class="fas fa-dumbbell"></i> Gestão de Academias</h1>
+                <button class="btn-primary" id="addGymBtn">
+                    <i class="fas fa-plus"></i> Adicionar Academia
+                </button>
+            </div>
+
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="statusFilter">Status:</label>
+                    <select id="statusFilter">
+                        <option value="all">Todas</option>
+                        <option value="active">Ativas</option>
+                        <option value="pending">Pendentes</option>
+                        <option value="suspended">Suspensas</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="locationFilter">Localização:</label>
+                    <select id="locationFilter">
+                        <option value="all">Todas</option>
+                        <option value="Talatona">Talatona</option>
+                        <option value="Maianga">Maianga</option>
+                    </select>
+                </div>
+                <button class="btn-secondary" id="resetFilters">
+                    <i class="fas fa-undo"></i> Limpar
+                </button>
+            </div>
+
+            <div class="table-container">
+                <table id="gymsTable" class="display">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Localização</th>
+                            <th>Plano</th>
+                            <th>Status</th>
+                            <th>Última Atualização</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dados serão carregados via JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal para Adicionar/Editar Academia -->
+    <div class="modal" id="gymModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modalTitle">Adicionar Nova Academia</h2>
+            <form id="gymForm">
+                <input type="hidden" id="gymId">
+                <div class="form-group">
+                    <label for="gymName">Nome da Academia</label>
+                    <input type="text" id="gymName" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="gymOwner">Proprietário</label>
+                        <input type="text" id="gymOwner" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gymEmail">Email</label>
+                        <input type="email" id="gymEmail" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="gymLocation">Localização</label>
+                        <select id="gymLocation" required>
+                            <option value="">Selecione...</option>
+                            <option value="Talatona">Talatona</option>
+                            <option value="Maianga">Maianga</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="gymPlan">Plano</label>
+                        <select id="gymPlan" required>
+                            <option value="basic">Básico</option>
+                            <option value="premium">Premium</option>
+                            <option value="enterprise">Enterprise</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" id="cancelGymBtn">Cancelar</button>
+                    <button type="submit" class="btn-primary">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/js/admin-academias.js"></script>
+</body>
+</html>
