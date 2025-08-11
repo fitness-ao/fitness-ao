@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-ao">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações - Fitness.AO Admin</title>
+    <link rel="stylesheet" href="../assets/css/admin.css">
+      <link rel="stylesheet" href="assets/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar (manter igual às outras páginas) -->
+        
+        <main class="main-content">
+            <header class="top-bar">
+                <!-- Barra superior padrão -->
+            </header>
+
+            <div class="settings-container">
+                <h1><i class="fas fa-cog"></i> Configurações do Sistema</h1>
+                
+                <!-- Menu Lateral de Configurações -->
+                <div class="settings-nav">
+                    <div class="settings-category active" data-target="general">
+                        <i class="fas fa-sliders-h"></i> Geral
+                    </div>
+                    <div class="settings-category" data-target="security">
+                        <i class="fas fa-shield-alt"></i> Segurança
+                    </div>
+                    <div class="settings-category" data-target="notifications">
+                        <i class="fas fa-bell"></i> Notificações
+                    </div>
+                    <div class="settings-category" data-target="integrations">
+                        <i class="fas fa-plug"></i> Integrações
+                    </div>
+                    <div class="settings-category" data-target="backup">
+                        <i class="fas fa-database"></i> Backup
+                    </div>
+                </div>
+                
+                <!-- Conteúdo das Configurações -->
+                <div class="settings-content">
+                    <!-- Seção Geral -->
+                    <div id="general" class="settings-section active">
+                        <h2><i class="fas fa-sliders-h"></i> Configurações Gerais</h2>
+                        
+                        <div class="settings-group">
+                            <h3>Informações da Plataforma</h3>
+                            <div class="form-group">
+                                <label for="platformName">Nome da Plataforma</label>
+                                <input type="text" id="platformName" value="Fitness.AO">
+                            </div>
+                            <div class="form-group">
+                                <label for="adminEmail">Email do Administrador</label>
+                                <input type="email" id="adminEmail" value="admin@fitness.ao">
+                            </div>
+                        </div>
+                        
+                        <div class="settings-group">
+                            <h3>Horário Comercial</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="openTime">Abertura</label>
+                                    <input type="time" id="openTime" value="08:00">
+                                </div>
+                                <div class="form-group">
+                                    <label for="closeTime">Fechamento</label>
+                                    <input type="time" id="closeTime" value="18:00">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="timezone">Fuso Horário</label>
+                                <select id="timezone">
+                                    <option value="GMT+1">(GMT+1) Luanda</option>
+                                    <!-- Outras opções -->
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button class="btn-secondary">Cancelar</button>
+                            <button class="btn-primary">Salvar Alterações</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Seção Segurança -->
+                    <div id="security" class="settings-section">
+                        <h2><i class="fas fa-shield-alt"></i> Segurança</h2>
+                        
+                        <div class="settings-group">
+                            <h3>Autenticação</h3>
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="enable2fa" checked>
+                                <label for="enable2fa">Requer autenticação de dois fatores para administradores</label>
+                            </div>
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="passwordExpiration">
+                                <label for="passwordExpiration">Exigir mudança de senha a cada 90 dias</label>
+                            </div>
+                        </div>
+                        
+                        <div class="settings-group">
+                            <h3>Registro de Atividades</h3>
+                            <div class="form-group">
+                                <label for="logRetention">Retenção de Logs</label>
+                                <select id="logRetention">
+                                    <option value="30">30 dias</option>
+                                    <option value="90" selected>90 dias</option>
+                                    <option value="365">1 ano</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button class="btn-secondary">Reverter</button>
+                            <button class="btn-primary">Aplicar</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Outras seções (Notificações, Integrações, Backup) -->
+                    <!-- Estrutura similar às anteriores -->
+                    
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../assets/js/admin-configuracoes.js"></script>
+</body>
+</html>
